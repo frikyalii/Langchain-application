@@ -1,0 +1,12 @@
+from langchain_openai import ChatOpenAI
+from dotenv import load_dotenv
+
+load_dotenv()
+
+llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+
+result = llm.invoke("What is the capital of France?")
+print(result.content)
+
+result=llm.invoke("Trump age?")
+print(result.content)
